@@ -4,6 +4,7 @@
     <title>PiCalc</title>
     <mhtml type="accentColor" color="#001E8D"/>
     <mhtml type="primaryColor" color="#001E8D"/>
+    <script src="c.js"></script>
    <style>
      * {
        box-sizing:border-box;
@@ -30,6 +31,9 @@
       }
       function contributeAnon() {
         alert("Coming soon. Check back later.");
+        var n = prompt("Enter the digit n to calculate");
+        var a = prompt("Enter accuracy");
+        alert(c(n,a));
       }
     </script>
   </body>
