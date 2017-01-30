@@ -4,7 +4,7 @@
 //WITHOUT WRITTEN CONSENT OF MATTHEW WHITAKER
 //AND SUB 6 RESOURCES
 //LICENSE.md may give more details
-function c(n,a) {return (((0x4*s1(n,a))-(0x2*s2(n,a))-(s3(n,a))-(s4(n,a)))%0x1)*0xF;}
+function c(n,a) {return (((4*s1(n,a))-(2*s2(n,a))-(s3(n,a))-(s4(n,a)))%1)*16;}
 function s1(n,a) {
   var k1,k2;
   k1=0;
@@ -17,6 +17,7 @@ function s1(n,a) {
     k2+=((Math.pow(16,n-k))/((8*k)+1));
   }
   k1=h(k1);k2=h(k2);
+  l("s1: k1="+k1+" k2="+k2);
   return k1+k2;
 }
 function s2(n,a) {
@@ -31,6 +32,7 @@ function s2(n,a) {
     k2+=((Math.pow(16,n-k))/((8*k)+4));
   }
   k1=h(k1);k2=h(k2);
+  l("s2: k1="+k1+" k2="+k2);
   return k1+k2;
 }
 function s3(n,a) {
@@ -45,6 +47,7 @@ function s3(n,a) {
     k2+=((Math.pow(16,n-k))/((8*k)+5));
   }
   k1=h(k1);k2=h(k2);
+  l("s3: k1="+k1+" k2="+k2);
   return k1+k2;
 }
 function s4(n,a) {
@@ -59,6 +62,8 @@ function s4(n,a) {
     k2+=((Math.pow(16,n-k))/((8*k)+6));
   }
   k1=h(k1);k2=h(k2);
+  l("s4: k1="+k1+" k2="+k2);
   return k1+k2;
 }
 function h(nu) {var hS = nu.toString(16); return parseInt(hS, 16);}
+function l(me) {document.getElementById("log").innerHTML += '<br />>>> '+me;}
