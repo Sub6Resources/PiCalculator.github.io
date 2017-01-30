@@ -31,10 +31,8 @@
         alert("Sign In Coming Soon. Check back later.");
       }
       function contributeAnon() {
-        alert("Coming soon. Check back later.");
-        var n = prompt("Enter the digit n to calculate");
-        var a = prompt("Enter accuracy");
-        document.getElementById("log").innerHTML += '<br />Result: '+c(n,a);
+        var n = prompt("What number?");
+      l("Result: "+Math.floor(c(n,1000000000)));
       }
     </script>
   </body>
