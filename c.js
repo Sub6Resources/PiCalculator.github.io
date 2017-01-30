@@ -9,6 +9,9 @@ function c(n,a) {return (((4*s1(n,a))-(2*s2(n,a))-(s3(n,a))-(s4(n,a)))%1)*B;}
 function s1(n,a) {
   var k1,k2;
   //TODO start here.
+  for(i=0;i<n;i++) {
+    
+  }
 }
 function s2(n,a) {
   var k1,k2;
