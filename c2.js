@@ -15,39 +15,39 @@ function calculate(NDIGITS) {
         h = 0;
 
     for (; a.length !== LEN; a.push(0));
-    log("A: "+a);
+    console.log("A: "+a);
     for (; (b = c -= 14) > 0;) {
-        log("B: "+b);
-        log("C: "+c);
+        console.log("B: "+b);
+        console.log("C: "+c);
         for (; --b > 0;) {
-            log("B(LOOP): "+b);
+            console.log("B(LOOP): "+b);
             d *= b;
-            log("D: "+d);
+            console.log("D: "+d);
             if (h === 0) {
                 d += 2000 * f;
-                log("D(H === 0): "+d);
+                console.log("D(H === 0): "+d);
             } else {
                 d += a[b] * f;
-                log("D(H !== 0): "+d);
+                console.log("D(H !== 0): "+d);
             }
             g = b + b - 1;
-            log("G: "+g);
+            console.log("G: "+g);
             a[b] = mod(d, g);
-            log("A[B]: "+a[b]);
+            console.log("A[B]: "+a[b]);
             d = Math.floor(d / g);
-            log("D(floor): "+d); 
+            console.log("D(floor): "+d); 
         }
         h = Math.floor(e + d / f);
-        log("H: "+h);
+        console.log("H: "+h);
         out += h;
-        log("OUT: "+out);
+        console.log("OUT: "+out);
         h = h.length;
-        log("H.LENGTH: "+h);
+        console.log("H.LENGTH: "+h);
         d = e = mod(d, f);
-        log("D(end): "+d);
-        log("E(end): "+e);
+        console.log("D(end): "+d);
+        console.log("E(end): "+e);
     }
-    log("OUT COMING: "+out);
+    console.log("OUT COMING: "+out);
     return out;
 }
 
