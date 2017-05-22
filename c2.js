@@ -35,3 +35,5 @@ function calculate(NDIGITS) {
     return out;
 }
 console.log(calculate(100));
+
+function log(me) {document.getElementById("log").innerHTML += '<br />>>> '+me;}
