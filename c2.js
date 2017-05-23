@@ -1,4 +1,4 @@
-var logDiv = document.getElementById("log")
+body.onload = function() {var logDiv = document.getElementById("log");};
 function mod(m, n) {
         return ((m % n) + n) % n;
 } // mod function to fix javascript modulo bug
@@ -41,7 +41,7 @@ function calculate(NDIGITS) {
         h = Math.floor(e + d / f);
         console.log("H: "+h);
         out += h;
-        logDiv.innerHTML += h+"";
+        logDiv.innerHTML += h;
         console.log("OUT: "+out);
         h = h.length;
         console.log("H.LENGTH: "+h);
@@ -52,5 +52,5 @@ function calculate(NDIGITS) {
     console.log("OUT COMING: "+out);
     return out;
 }
-
+function add(me) {logDiv.innerHTML += me;}
 function log(me) {document.getElementById("log").innerHTML += '<br />>>> '+me;}
