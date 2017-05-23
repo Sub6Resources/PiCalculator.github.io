@@ -1,7 +1,3 @@
-var logDiv = document.getElementById("log");
-function mod(m, n) {
-        return ((m % n) + n) % n;
-} // mod function to fix javascript modulo bug
 var NDIGITS = 1000;
     var LEN = (NDIGITS / 4 + 1) * 14,
         out = "",
@@ -52,3 +48,6 @@ var NDIGITS = 1000;
 log("RESULT: "+out);
 function add(me) {postMessage(me);}
 function log(me) {postMessage('<br />>>> '+me);}
+function mod(m, n) {
+        return ((m % n) + n) % n;
+} // mod function to fix javascript modulo bug
