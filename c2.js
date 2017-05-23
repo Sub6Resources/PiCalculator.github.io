@@ -4,6 +4,7 @@ function mod(m, n) {
 } // mod function to fix javascript modulo bug
 
 function calculate(NDIGITS) {
+    window.status="";
     var LEN = (NDIGITS / 4 + 1) * 14,
         out = "",
         a = [],
@@ -41,7 +42,7 @@ function calculate(NDIGITS) {
         h = Math.floor(e + d / f);
         console.log("H: "+h);
         out += h;
-        logDiv.innerHTML += h;
+        window.status += h;
         console.log("OUT: "+out);
         h = h.length;
         console.log("H.LENGTH: "+h);
