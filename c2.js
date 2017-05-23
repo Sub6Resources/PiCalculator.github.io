@@ -2,9 +2,6 @@ var logDiv = document.getElementById("log");
 function mod(m, n) {
         return ((m % n) + n) % n;
 } // mod function to fix javascript modulo bug
-
-function calculate(NDIGITS) {
-    window.status="";
     var LEN = (NDIGITS / 4 + 1) * 14,
         out = "",
         a = [],
@@ -51,7 +48,6 @@ function calculate(NDIGITS) {
         console.log("E(end): "+e);
     }
     console.log("OUT COMING: "+out);
-    return out;
-}
-function add(me) {logDiv.innerHTML += me;}
-function log(me) {document.getElementById("log").innerHTML += '<br />>>> '+me;}
+log("RESULT: "+out);
+function add(me) {postMessage(me);}
+function log(me) {postMessage('<br />>>> '+me);}
