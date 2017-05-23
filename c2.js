@@ -2,7 +2,7 @@ var logDiv = document.getElementById("log");
 function mod(m, n) {
         return ((m % n) + n) % n;
 } // mod function to fix javascript modulo bug
-var NDIGITS = prompt("How many digits?");
+var NDIGITS = 1000;
     var LEN = (NDIGITS / 4 + 1) * 14,
         out = "",
         a = [],
