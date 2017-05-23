@@ -1,4 +1,4 @@
-body.onload = function() {var logDiv = document.getElementById("log");};
+var logDiv = document.getElementById("log");
 function mod(m, n) {
         return ((m % n) + n) % n;
 } // mod function to fix javascript modulo bug
