@@ -42,7 +42,7 @@
                 w.onmessage = function(event) {
                     document.getElementById("log").innerHTML += event.data;
                 };
-                w.onerror(message, filename, lineno) {
+                w.onerror = function(message, filename, lineno) {
                     document.getElementById("log").innerHTML += "ERROR: "+message+"<br />&nbsp;&nbsp;&nbsp;at "+filename+":"+lineno;
                 };
             } else {
