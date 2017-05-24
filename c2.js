@@ -47,7 +47,7 @@ var NDIGITS = 10000;
     //console.log("OUT COMING: "+out);
 //log("RESULT: "+out);
 function add(me) {postMessage(me);}
-function log(me) {postMessage('<br />>>> '+me);}
+function log(me) {postMessage('<br />'+me);}
 function mod(m, n) {
         return ((m % n) + n) % n;
 } // mod function to fix javascript modulo bug
