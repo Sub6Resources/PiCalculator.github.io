@@ -11,41 +11,41 @@ var NDIGITS = 100;
         h = 0;
 
     for (; a.length !== LEN; a.push(0));
-    console.log("A: "+a);
+    //console.log("A: "+a);
     for (; (b = c -= 14) > 0;) {
-        console.log("B: "+b);
-        console.log("C: "+c);
+        //console.log("B: "+b);
+        //console.log("C: "+c);
         for (; --b > 0;) {
-            console.log("B(LOOP): "+b);
+            //console.log("B(LOOP): "+b);
             d *= b;
-            console.log("D: "+d);
+            //console.log("D: "+d);
             if (h === 0) {
                 d += 2000 * f;
-                console.log("D(H === 0): "+d);
+                //console.log("D(H === 0): "+d);
             } else {
                 d += a[b] * f;
-                console.log("D(H !== 0): "+d);
+                //console.log("D(H !== 0): "+d);
             }
             g = b + b - 1;
-            console.log("G: "+g);
+            //console.log("G: "+g);
             a[b] = mod(d, g);
-            console.log("A[B]: "+a[b]);
+            //console.log("A[B]: "+a[b]);
             d = Math.floor(d / g);
-            console.log("D(floor): "+d); 
+            //console.log("D(floor): "+d); 
         }
         h = Math.floor(e + d / f);
-        console.log("H: "+h);
+        //console.log("H: "+h);
         out += h;
         add(h);
-        console.log("OUT: "+out);
+        //console.log("OUT: "+out);
         h = h.length;
-        console.log("H.LENGTH: "+h);
+        //console.log("H.LENGTH: "+h);
         d = e = mod(d, f);
-        console.log("D(end): "+d);
-        console.log("E(end): "+e);
+        //console.log("D(end): "+d);
+        //console.log("E(end): "+e);
     }
-    console.log("OUT COMING: "+out);
-log("RESULT: "+out);
+    //console.log("OUT COMING: "+out);
+//log("RESULT: "+out);
 function add(me) {postMessage(me);}
 function log(me) {postMessage('<br />>>> '+me);}
 function mod(m, n) {
