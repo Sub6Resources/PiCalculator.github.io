@@ -42,6 +42,9 @@
                 w.onmessage = function(event) {
                     document.getElementById("log").innerHTML += event.data;
                 };
+                w.onerror(message, filename, lineno) {
+                    document.getElementById("log").innerHTML += "ERROR: "+message+"<br />&nbsp;&nbsp;&nbsp;at "+filename+":"+lineno
+                };
             } else {
                 document.getElementById("log").innerHTML += "<br />>>>Web Workers must be supported by your browser in order to calculate Pi! Please switch to a better browser.";
             }
