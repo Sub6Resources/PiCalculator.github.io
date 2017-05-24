@@ -36,6 +36,7 @@ var NDIGITS = 100;
         h = Math.floor(e + d / f);
         console.log("H: "+h);
         out += h;
+        add(h);
         console.log("OUT: "+out);
         h = h.length;
         console.log("H.LENGTH: "+h);
