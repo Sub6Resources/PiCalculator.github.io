@@ -48,8 +48,8 @@
                 w.onmessage = function(event) {
                    $("#log").append(event.data);
                 };
-                w.onerror = function(message, filename, lineno) {
-                   $("#log").append("ERROR: "+message+"<br />&nbsp;&nbsp;&nbsp;at "+filename+":"+lineno);
+                w.onerror = function(error) {
+                   $("#log").append("ERROR: "+error.message+"<br />&nbsp;&nbsp;&nbsp;at "+error.filename+":"+error.lineno);
                 };
             } else {
                 $("#log").append("<br />>>>Web Workers must be supported by your browser in order to calculate Pi! Please switch to a better browser.");
