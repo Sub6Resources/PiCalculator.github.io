@@ -13,6 +13,8 @@ log("Starting...");
 calcpi(NDIGITSi, outi, ai, bi, ci, di, ei, fi, gi, hi);
 function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
     var LEN = (NDIGITS / 4 + 1) * 14;
+    c = LEN;
+    f = 10000;
     log("Calculating "+NDIGITS+" digits of pi...");
     for (; a.length !== LEN; a.push(0));
     //console.log("A: "+a);
