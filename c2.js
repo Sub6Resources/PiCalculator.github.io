@@ -1,4 +1,4 @@
-var NDIGITS = 100000;
+var NDIGITS = 1000;
     var LEN = (NDIGITS / 4 + 1) * 14,
         out = "",
         a = [],
