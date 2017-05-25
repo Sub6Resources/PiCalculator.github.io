@@ -1,17 +1,18 @@
 var NDIGITSi = 1000;
-    var LENi = (NDIGITS / 4 + 1) * 14,
+    var LENi = (NDIGITSi / 4 + 1) * 14,
         outi = "",
         ai = [],
         bi = 0,
-        ci = LEN,
+        ci = LENi,
         di = 0,
         ei = 0,
         fi = 10000,
         gi = 0,
         hi = 0;
 log("Starting...");
-calcpi(NDIGITSi, LENi, outi, ai, bi, ci, di, ei, fi, gi, hi);
-function calcpi(NDIGITS, LEN, out, a, b, c, d, e, f, g, h) {
+calcpi(NDIGITSi, outi, ai, bi, ci, di, ei, fi, gi, hi);
+function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
+    var LEN = (NDIGITS / 4 + 1) * 14;
     log("Calculating "+NDIGITS+" digits of pi...");
     for (; a.length !== LEN; a.push(0));
     //console.log("A: "+a);
@@ -49,7 +50,7 @@ function calcpi(NDIGITS, LEN, out, a, b, c, d, e, f, g, h) {
     }
     //console.log("OUT COMING: "+out);
     log("DONE");
-    calcpi(NDIGITS+1000, LEN, out, a, b, c,d,e,f,g,h);
+    calcpi(NDIGITS+1000, out, a, b, c,d,e,f,g,h);
 //log("RESULT: "+out);
 }
 function add(me) {postMessage(me);}
