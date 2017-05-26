@@ -30,8 +30,8 @@
       <h3 id="smallerNumber">You have contributed: 0000</h3>
       <br />
       <br />
-      <fab id="start" onClick="contributeAnon()">play</fab>
-      <mbutton id="stop" onClick="stop()">STOP</mbutton>
+      <fab id="start" title="Contribute To Pi">play_arrow</fab>
+      <fab id="stop" onClick="stop()" title="Stop Contributing">stop</fab>
     </center>
       <code><div id="log">>>>LOG BEGINS HERE:<br /></div></code>
     </content>
@@ -50,6 +50,12 @@
         $("#stop").fadeOut();
         $("#start").fadeIn();
         stopWorker();
+      }
+      function fab1Click() {
+        contributeAnon();
+      }
+      function fab2Click() {
+        stop();
       }
       function startWorker() {
             if(typeof(Worker) !== "undefined") {
