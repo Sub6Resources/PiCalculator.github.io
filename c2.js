@@ -11,6 +11,7 @@ var NDIGITSi = 100000;
         gi = 0,
         hi = 0,
         temph = "";
+var it = 1;
 log("Starting...");
 calcpi(NDIGITSi, outi, ai, bi, ci, di, ei, fi, gi, hi);
 function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
@@ -56,7 +57,8 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         out += temph;
         add(temph+" ");
         if(out.length % 100 == 0) {
-            log("100 digits");
+            log(it+"00 digits: ");
+            it++;
         }
         //console.log("OUT: "+out);
         h = h.length;
