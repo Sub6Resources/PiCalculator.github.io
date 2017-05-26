@@ -55,6 +55,9 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         }
         out += temph;
         add(temph+" ");
+        if(out.length % 100 == 0) {
+            log("100 digits");
+        }
         //console.log("OUT: "+out);
         h = h.length;
         //console.log("H.LENGTH: "+h);
