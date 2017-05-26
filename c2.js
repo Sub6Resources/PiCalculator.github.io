@@ -1,3 +1,4 @@
+self.importScript("bignumber.js");
 var NDIGITSi = 100000;
     var LENi = (NDIGITSi / 4 + 1) * 14,
         outi = "",
