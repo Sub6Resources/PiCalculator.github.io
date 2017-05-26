@@ -22,14 +22,15 @@
     <action clickFunction="signIn()">account_circle</action>
     <content>
     <center>
-      <h1>Contribute your computer's power to the ongoing search for more digits of pi.</h1>
+      <h1>Contribute your computer's power to the ongoing search for more digits of pi!</h1>
       <h2 id="number">Total Digits Found: 000000000</h2>
       <h3 id="smallerNumber">You have contributed: 0000</h3>
       <br />
       <br />
-      <mbutton onClick="contributeAnon()">Contribute Anonymously</mbutton>
+      <mbutton id="start" onClick="contributeAnon()">Contribute Anonymously</mbutton>
+      <mbutton id="stop" onClick="stop()">STOP</mbutton>
     </center>
-      <div id="log">>>>LOG BEGINS HERE:<br /></div>
+      <code><div id="log">>>>LOG BEGINS HERE:<br /></div></code>
     </content>
     <script src="https://matthewwhitaker.me/api/mhtml.js"></script>
     <script>
@@ -38,7 +39,14 @@
         alert("Sign In Coming Soon. Check back later.");
       }
       function contributeAnon() {
+        $("#start").fadeOut();
+        $("#stop").fadeIn();
         startWorker();
+      }
+      function stop() {
+        $("#stop").fadeOut();
+        $("#start").fadeIn();
+        stopWorker();
       }
       function startWorker() {
             if(typeof(Worker) !== "undefined") {
@@ -52,10 +60,10 @@
                    $("#log").append("ERROR: "+error.message+"<br />&nbsp;&nbsp;&nbsp;at "+error.filename+":"+error.lineno);
                 };
             } else {
-                $("#log").append("<br />>>>Web Workers must be supported by your browser in order to calculate Pi! Please switch to a better browser.");
+                $("#log").append("<br />>>>Web Workers must be supported by your browser in order to calculate Pi! Please switch to a better browser (like Chrome, Firefox, or Safari).");
             }
         }
-      function stopWorker() { 
+      function stopWorker() {
           w.terminate();
           w = undefined;
       }
