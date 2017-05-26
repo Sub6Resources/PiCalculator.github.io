@@ -54,8 +54,15 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         else if(temph.length == 3) {
           temph = "0"+temph;
         }
+        if(temph.length == 5) {
+            //Probably a 10000, add one to digit before, and put last four digits into this set.
+            var lastNumber = out.slice(-1);
+            out = out.slice(0, -1);
+            out += ((lastNumber*1) + (temph.charAt(0)*1));
+            temph = temph.substring(1, temph.length);
+        }
         out += temph;
-        add(temph+" ");
+        add(temph+"");
         if(out.length % 100 == 0) {
             //remove in production
             log(it+"00 digits: ");
