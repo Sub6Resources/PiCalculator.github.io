@@ -8,7 +8,8 @@ var NDIGITSi = 1000;
         ei = 0,
         fi = 10000,
         gi = 0,
-        hi = 0;
+        hi = 0,
+        temph = "";
 log("Starting...");
 calcpi(NDIGITSi, outi, ai, bi, ci, di, ei, fi, gi, hi);
 function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
@@ -41,8 +42,18 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         }
         h = Math.floor(e + d / f);
         //console.log("H: "+h);
-        out += h;
-        add(h+" ");
+        temph = h+"";
+        if(temph.length == 1) {
+          temph = "000"+temph;
+        }
+        else if(temph.length == 2) {
+          temph = "00"+temph;
+        }
+        else if(temph.length == 3) {
+          temph = "0"+temph;
+        }
+        out += temph;
+        add(temph+" ");
         //console.log("OUT: "+out);
         h = h.length;
         //console.log("H.LENGTH: "+h);
