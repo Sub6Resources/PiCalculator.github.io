@@ -42,7 +42,7 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         h = Math.floor(e + d / f);
         //console.log("H: "+h);
         out += h;
-        add(h);
+        add(h+" ");
         //console.log("OUT: "+out);
         h = h.length;
         //console.log("H.LENGTH: "+h);
@@ -52,11 +52,11 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
     }
     //console.log("OUT COMING: "+out);
     log("DONE");
-    calcpi(NDIGITS+1000, out, a, b, c,d,e,f,g,h);
+    //calcpi(NDIGITS+1000, out, a, b, c,d,e,f,g,h);
 //log("RESULT: "+out);
 }
 function add(me) {postMessage(me);}
-function log(me) {postMessage('<br />&gt;&gt;&gt;'+me);}
+function log(me) {postMessage('<br />&gt;&gt;&gt; '+me);}
 function mod(m, n) {
         return ((m % n) + n) % n;
 } // mod function to fix javascript modulo bug
