@@ -21,7 +21,7 @@
     </style>
   </head>
   <body>
-    <toolbar title="PiCalc"></toolbar>
+    <toolbar title="PiCalc <span id='digits'></span>"></toolbar>
     <action clickFunction="signIn()">account_circle</action>
     <content>
     <center>
@@ -65,6 +65,7 @@
                 }
                 w.onmessage = function(event) {
                    $("#log").append(event.data);
+                   $("#digits").text($("#log").text().replace(" ","").length.toString()); //Calculate num of digits.
                 };
                 w.onerror = function(error) {
                    $("#log").append("ERROR: "+error.message+"<br />&nbsp;&nbsp;&nbsp;at "+error.filename+":"+error.lineno);
