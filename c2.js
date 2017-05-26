@@ -57,6 +57,7 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         out += temph;
         add(temph+" ");
         if(out.length % 100 == 0) {
+            //remove in production
             log(it+"00 digits: ");
             it++;
         }
