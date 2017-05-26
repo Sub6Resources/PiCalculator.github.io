@@ -1,4 +1,4 @@
-var NDIGITSi = 1000;
+var NDIGITSi = 1004;
     var LENi = (NDIGITSi / 4 + 1) * 14,
         outi = "",
         ai = [],
