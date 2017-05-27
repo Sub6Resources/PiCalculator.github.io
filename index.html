@@ -65,7 +65,7 @@
                 }
                 w.onmessage = function(event) {
                   if(event.data.includes("REPL:")) {
-                    $("#log").text($("#log").text().slice(0,-1));
+                    $("#log").html($("#log").html().slice(0,-1));
                     $("#log").append(event.data.split(":")[1]);
                   } else {
                     $("#log").append(event.data);
