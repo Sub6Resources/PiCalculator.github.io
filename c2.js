@@ -58,7 +58,9 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
             //Probably a 10000, add one to digit before, and put last four digits into this set.
             var lastNumber = out.slice(-1);
             out = out.slice(0, -1);
-            out += ((lastNumber*1) + (temph.charAt(0)*1));
+            var numToRepl = (((lastNumber*1) + (temph.charAt(0)*1)))+"";
+            replacePrev(numToRepl); //Send message to page telling to replace number before.
+            out += numToRepl;
             temph = temph.substring(1, temph.length);
         }
         out += temph;
@@ -81,6 +83,7 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
 //log("RESULT: "+out);
 }
 function add(me) {postMessage(me);}
+function replacePrev(newNum) {postMessage("REPL:"+newNum);}
 function log(me) {postMessage('<br />&gt;&gt;&gt; '+me);}
 function mod(m, n) {
         return ((m % n) + n) % n;
