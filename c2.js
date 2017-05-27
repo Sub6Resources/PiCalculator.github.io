@@ -28,11 +28,11 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
             if (h === 0) {
                 d += 2000 * f;
             } else {
-                d += a[b] * f;]
+                d += a[b] * f;
             }
-            g = b + b - 1;]
-            a[b] = mod(d, g);]
-            d = Math.floor(d / g);]
+            g = b + b - 1;
+            a[b] = mod(d, g);
+            d = Math.floor(d / g);
         }
         h = Math.floor(e + d / f);
         temph = h+"";
