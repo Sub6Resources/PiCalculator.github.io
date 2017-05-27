@@ -64,7 +64,7 @@
                     w = new Worker("c2.js");
                 }
                 w.onmessage = function(event) {
-                  if(event.data.contains("REPL")) {
+                  if(event.data.includes("REPL:")) {
                     $("#log").text($("#log").text().split(0,-1));
                     $("#log").append(event.data.split(":")[1]);
                   } else {
