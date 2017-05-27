@@ -1,6 +1,6 @@
 //Initialization
-self.importScripts("bignumber.js");
-var NDIGITSi = 100000;
+//self.importScripts("bignumber.js");
+var NDIGITSi = self.prompt("How many digits?"); //was 100,000
     var LENi = (NDIGITSi / 4 + 1) * 14,
         outi = "",
         ai = [],
