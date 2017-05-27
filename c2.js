@@ -66,7 +66,7 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         h = h.length;
         d = e = mod(d, f);
     }
-    log("DONE! Calculated "+out.length+" digits of pi!);
+    log("DONE! Calculated "+out.length+" digits of pi!");
 }
 function add(me) {postMessage(me);}
 function replacePrev(newNum) {postMessage("REPL:"+newNum);}
