@@ -1,6 +1,6 @@
 //Initialization
 //self.importScripts("bignumber.js");
-var NDIGITSi = 55000;
+var NDIGITSi = 1000000;
     var LENi = (NDIGITSi / 4 + 1) * 14,
         outi = "",
         ai = [],
@@ -58,9 +58,9 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         }
         out += temph;
         add(temph+"");
-        if(out.length % 100 == 0) {
+        if(out.length % 500 == 0) {
             //remove in production
-            log(it+"00 digits: ");
+            log((it*5)+"00 digits: ");
             it++;
         }
         h = h.length;
