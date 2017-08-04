@@ -1,6 +1,5 @@
 //Initialization
-//self.importScripts("bignumber.js");
-var NDIGITSi = 1000000;
+var NDIGITSi = 100000;
     var LENi = (NDIGITSi / 4 + 1) * 14,
         outi = "",
         ai = [],
@@ -37,16 +36,16 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         h = Math.floor(e + d / f);
         temph = h+"";
         var temphLength = temph.length;
-        if(temphLength == 1) {
+        if(temphLength === 1) {
           temph = "000"+temph;
         }
-        else if(temphLength == 2) {
+        else if(temphLength === 2) {
           temph = "00"+temph;
         }
-        else if(temphLength == 3) {
+        else if(temphLength === 3) {
           temph = "0"+temph;
         }
-        else if(temphLength == 5) {
+        else if(temphLength === 5) {
             //Probably a 10000, add one to digit before, and put last four digits into this set.
             var lastNumber = out.slice(-1);
             out = out.slice(0, -1);
@@ -58,7 +57,7 @@ function calcpi(NDIGITS, out, a, b, c, d, e, f, g, h) {
         }
         out += temph;
         add(temph+"");
-        if(out.length % 500 == 0) {
+        if(out.length % 500 === 0) {
             //remove in production
             log((it*5)+"00 digits: ");
             it++;
